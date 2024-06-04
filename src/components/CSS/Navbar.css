@@ -1,0 +1,64 @@
+/* Navbar */
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translatex(-200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+.appbar {
+  animation: slideInDown 2s ease-out;
+}
+
+.home-button {
+  margin-right: auto; /* Pushes the "Home" button to the left */
+}
+
+.spacer {
+  flex-grow: 1; /* Spreads out the space between the "Home" button and the other buttons */
+}
+
+.link-buttons {
+    transition: transform 0.3s !important;
+}
+
+.link-buttons:hover {
+    transform: translateY(-5px)
+
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 58px; /* Adjust based on your AppBar height */
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    animation: slideInLeft 0.3s ease-out;
+}
+
+.mobile-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}

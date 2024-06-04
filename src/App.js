@@ -1,4 +1,3 @@
-import './App.css';
 import Layout from './Layout';
 import Home from './scenes/Home';
 import About from './scenes/About';
@@ -23,7 +22,7 @@ function App() {
               <Route path="/" element={<Layout />}> 
 
                 {/* public routes */}
-                <Route path="/" element={<Home />} />
+                <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="mission" element={<Mission />} />
                 <Route path="projects" element={<Projects />} />
